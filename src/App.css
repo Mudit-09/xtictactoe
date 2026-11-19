@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 16px;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 430px;
+  padding: 30px;
+  text-align: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0 0 25px;
+  font-size: 30px;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 13px 5px;
+  border-radius: 8px;
+  background: #f1f5f9;
+}
+
+.score span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.score strong {
+  font-size: 25px;
+}
+
+.x-score {
+  color: #2563eb;
+}
+
+.o-score {
+  color: #e11d48;
+}
+
+.draw-score {
+  color: #64748b;
+}
+
+.game-status {
+  min-height: 24px;
+  margin: 22px 0 15px;
+  font-weight: 600;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 8px;
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cell:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.cell-x {
+  color: #2563eb;
+}
+
+.cell-o {
+  color: #e11d48;
+}
+
+.game-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.game-actions button {
+  flex: 1;
+  padding: 12px 8px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.game-actions button:hover {
+  background: #1d4ed8;
+}
+
+.game-actions .reset-button {
+  background: #64748b;
+}
+
+.game-actions .reset-button:hover {
+  background: #475569;
+}
+
+@media (max-width: 400px) {
+  .game-container {
+    padding: 20px;
+  }
+
+  .cell {
+    font-size: 38px;
+  }
+}

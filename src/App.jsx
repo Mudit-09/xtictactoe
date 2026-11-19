@@ -71,16 +71,13 @@ function App() {
 
         <div className="scoreboard">
           <div className="score x-score">
-            <span>X</span>
-            <strong>{scores.X}</strong>
+            <strong>X: {scores.X}</strong>
           </div>
           <div className="score draw-score">
-            <span>Draws</span>
-            <strong>{scores.draws}</strong>
+            <strong>Draws: {scores.draws}</strong>
           </div>
           <div className="score o-score">
-            <span>O</span>
-            <strong>{scores.O}</strong>
+            <strong>O: {scores.O}</strong>
           </div>
         </div>
 
